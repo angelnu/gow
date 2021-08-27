@@ -16,6 +16,7 @@ sudo docker-compose pull
 sudo docker-compose up
 ```
 
+
 Wait, are you seriously running code from the internet?
 
 It's dangerous out there! Make sure to checkout the [documentation](https://games-on-whales.github.io/gow/) first!
