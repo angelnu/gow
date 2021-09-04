@@ -5,8 +5,8 @@ ENV TZ="Europe/London"
 
 ENV UNAME retro
 
-# Pulling Sunshine v0.10.1
-ARG SUNSHINE_SHA=7a920da06d1417828674842f44b919b75d70d3fe
+# Pulling Sunshine 2021.9.5
+ARG SUNSHINE_SHA=4ca2c0e7405bd970d2da89c6bafd58708e8a8536
 ENV SUNSHINE_SHA=${SUNSHINE_SHA}
 ARG BUILD_TYPE=RELEASE 
 ENV BUILD_TYPE=${BUILD_TYPE}
@@ -24,7 +24,7 @@ RUN git clone https://github.com/loki-47-6F-64/sunshine.git && \
     cd sunshine && \
     # Fix the SHA commit
     git checkout -qf $SUNSHINE_SHA && \
-    # Just printing out git info so that I can double check on CI if the right version as been picked up
+    # Just printing out git info so that I can double check on CI if the right version has been picked up
     git show && \
     # Recursively download submodules
     git submodule update --init --recursive && \
