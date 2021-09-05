@@ -23,7 +23,7 @@ RUN apt-get update -y && apt-get install -y --no-install-recommends \
 RUN git clone https://github.com/loki-47-6F-64/sunshine.git && \
     cd sunshine && \
     # Fix the SHA commit
-    git checkout -qf $SUNSHINE_SHA && \
+    #git checkout -qf $SUNSHINE_SHA && \
     # Just printing out git info so that I can double check on CI if the right version has been picked up
     git show && \
     # Recursively download submodules
