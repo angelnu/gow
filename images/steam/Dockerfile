@@ -1,4 +1,4 @@
-FROM ubuntu:20.04 AS base
+FROM ubuntu:21.04 AS base
 
 ENV DEBIAN_FRONTEND=noninteractive 
 ENV TZ="Europe/London"
@@ -14,6 +14,8 @@ RUN apt-get update -y && \
     add-apt-repository multiverse && \
     apt-get update -y && \
     apt-get install -y --no-install-recommends steam \
+    # wine and winetrics for https://github.com/GloriousEggroll/proton-ge-custom
+    wine winetricks \
     # Adding Vulkan
     libvulkan1 libvulkan1:i386 mesa-vulkan-drivers mesa-vulkan-drivers:i386 \
     # Add libdbus to fix webui black screen (https://github.com/ValveSoftware/steam-for-linux/issues/7058)
