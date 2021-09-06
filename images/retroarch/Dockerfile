@@ -1,4 +1,4 @@
-FROM ubuntu:20.04 AS base
+FROM ubuntu:21.04 AS base
 
 ENV DEBIAN_FRONTEND=noninteractive 
 ENV TZ="Europe/London"
@@ -12,6 +12,8 @@ RUN apt-get update && \
     # Install retroarch \
     add-apt-repository ppa:libretro/stable && \
     apt-get install -y retroarch retroarch-assets libretro* \
+    # Adding Vulkan
+    libvulkan1 mesa-vulkan-drivers \
     # Install xdpyinfo so that we can wait for X11 on startup
     x11-utils \
     && \
