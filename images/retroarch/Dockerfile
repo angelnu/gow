@@ -1,4 +1,4 @@
-FROM ubuntu:21.04 AS base
+FROM ubuntu:20.04 AS base
 
 ENV DEBIAN_FRONTEND=noninteractive 
 ENV TZ="Europe/London"
